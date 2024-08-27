@@ -1,0 +1,19 @@
+Nombre del Proyecto:
+Integración del Botón de Pago Bold
+
+Descripción General:
+Este proyecto tiene como objetivo implementar una tienda en línea que permite a los usuarios agregar productos a un carrito de compras y realizar pagos utilizando el botón de pago Bold. La tienda está desarrollada con una interfaz de usuario moderna y atractiva, y se conecta a una API externa para obtener los productos. La integración con Bold asegura transacciones seguras y eficientes.
+
+Stack Utilizado
+Frontend:
+
+HTML: Para la estructura de la página.
+CSS: Para el estilo y diseño de la página.
+JavaScript: Para la lógica del cliente, interacción con la API y el carrito de compras.
+
+Backend:
+
+Node.js: Entorno de ejecución para el servidor.
+Express.js: Framework para configurar el servidor y definir endpoints.
+crypto: Módulo para generar la firma de integridad de las transacciones.
+cors: Middleware para manejar las solicitudes HTTP entre diferentes orígenes.

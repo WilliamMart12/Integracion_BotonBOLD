@@ -1,0 +1,49 @@
+# Node modules
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Directorios de compilación
+dist/
+build/
+
+# Entornos específicos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Variables de entorno y configuración local
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Archivos de lock de dependencia
+yarn.lock
+
+# Cobertura de pruebas
+coverage/
+
+# Archivos de configuración de IDE/Editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Archivos de servicios
+.DS_Store
+/.sass-cache/
+/connect.lock
+/coverage/
+/npm-debug.log
+/gruntfile.js
+/bower_components
+/bower.json
+/testem.json
+/testem*

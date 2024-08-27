@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="/frontend/styles.css">
+    <script src="https://checkout.bold.co/library/boldPaymentButton.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Productos Store</h1>
+            <div id="cart-icon" class="cart-icon">
+                Carrito (<span id="cart-count">0</span>)
+            </div>
+        </header>
+        <div id="cart-details" class="cart-details">
+            <div id="cart-items"></div>
+            <button id="pay-button">Pagar con Bold</button>
+        </div>
+        <div id="products" class="product-list"></div>
+        <div class="pagination">
+            <button id="prev-button" onclick="previousPage()">Anterior</button>
+            <button id="next-button" onclick="nextPage()">Siguiente</button>
+        </div>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const orderId = urlParams.get('bold-order-id');
+        const status = urlParams.get('bold-tx-status');
+
+        if (orderId && status) {
+            document.getElementById('payment-status').textContent = `Transaction ${status} for order ${orderId}.`;
+        }
+    </script>
+    <script src="/frontend/scripts.js"></script>
+</body>
+</html>
