@@ -67,11 +67,11 @@ document.getElementById('pay-button').addEventListener('click', async () => {
     const currency = "COP";
     const amount = cart.reduce((total, product) => total + product.price, 0);
     const apiKey = ""; // Añade la Api key de tu cuenta BOLD
-    const redirectionUrl = "https://integracion-botonbold-front.onrender.com"; // Actualiza con la URL de tu frontend en Render
+    const redirectionUrl = "https://integracion-botonbold-front.onrender.com"; // URL de tu frontend en Render
     const integritySignature = await generateIntegritySignature(orderId, amount, currency, ""); // Añade la secret key de tu cuenta BOLD
     const description = "Compra en mi tienda";
 
-    const response = await fetch('https://integracion-botonbold-back.onrender.com/create-payment', {  // Cambia la URL al backend en Render
+    const response = await fetch('https://integracion-botonbold-back.onrender.com/create-payment', {  // URL de tu backend en Render
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ orderId, amount, currency })

@@ -1,7 +1,6 @@
 const express = require('express');
 const crypto = require('crypto');
 const cors = require('cors');
-const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -9,8 +8,8 @@ const PORT = process.env.PORT || 3000;
 // Configuración de CORS para permitir solicitudes desde tu frontend en Render
 app.use(cors({
     origin: 'https://integracion-botonbold-front.onrender.com', // URL de tu frontend
-    methods: 'GET,POST,PUT,DELETE', // Métodos HTTP permitidos
-    allowedHeaders: 'Content-Type,Authorization', // Encabezados permitidos
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: 'Content-Type,Authorization',
 }));
 
 app.use(express.json());
@@ -36,7 +35,7 @@ app.post('/create-payment', (req, res) => {
 // Ruta para redireccionar después del pago
 app.get('*', (req, res) => {
     const { 'bold-order-id': orderId, 'bold-tx-status': status } = req.query;
-    const liveServerUrl = `https://integracion-botonbold-front.onrender.com`; // Cambia la URL a la de tu frontend en Render
+    const liveServerUrl = `https://integracion-botonbold-front.onrender.com`; // URL de tu frontend en Render
     const redirectUrl = `${liveServerUrl}?bold-order-id=${orderId}&bold-tx-status=${status}`;
     res.redirect(redirectUrl);
 });
