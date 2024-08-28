@@ -2,11 +2,17 @@ const express = require('express');
 const crypto = require('crypto');
 const cors = require('cors');
 const path = require('path');
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.use(cors({
+    origin: 'https://integracion-botonbold-front.onrender.com', // URL de tu frontend
+    methods: 'GET,POST,PUT,DELETE', // Métodos HTTP permitidos
+    allowedHeaders: 'Content-Type,Authorization', // Encabezados permitidos
+}));
+
 app.use(express.json());
-app.use(cors());
 
 const SECRET_KEY = ''; //Añade la secret key de tu cuenta BOLD
 

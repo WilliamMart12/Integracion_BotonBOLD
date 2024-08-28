@@ -2,9 +2,9 @@
   "name": "caso_integration_engineer",
   "version": "1.0.0",
   "description": "",
-  "main": "backend/server.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node backend/server.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
